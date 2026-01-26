@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Average+Sans&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    background-color: lightgreen;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+.layout-principal {
+    display: flex;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+.atalhos {
+    width: 115px;
+    min-height: 100vh;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.conteudo-site {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.rodape-social {
+    width: 100%;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 5px 20px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.icone-social1,
+.icone-social2,
+.icone-social3,
+.icone-social4 {
+    width: 30px;
+    height: 30px;
+    background-color: gainsboro;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+}
+
+.icone-social1 {
+    background-image: url('instagram.png');
+}
+
+.icone-social2 {
+    background-image: url('facebook.png');
+}
+
+.icone-social3 {
+    background-image: url('youtube.png');
+}
+
+.icone-social4 {
+    background-image: url('tiktok.png');
+}
+
+.container-textos section {
+    flex: 1;
+    padding: 30px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.container-textos {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.container-textos2 section {
+    flex: 1;
+    padding: 30px;
+    background-color: lightgreen;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.container-textos2 {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.container-formulario {
+    margin-top: 50px;
+}
+
+.container-formulario section {
+    flex: 1;
+    padding: 30px;
+    background-color: lightgreen;
+    border-radius: 50px;
+
+}
+
+.container-faq {
+    margin-top: 20px;
+}
+
+.container-faq section {
+    flex: 1;
+    padding: 30px;
+    background-color: lightgreen;
+    border-radius: 50px;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    color: #333;
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif;
+    color: #555;
+}
+
+label {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+}
+
+select,
+input {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+}
+
+button {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+}
+
+span {
+    font-family: 'Noto Sans', sans-serif;
+    color: #555;
+}
+
+summary {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+}
+
+details p {
+    font-family: 'Noto Sans', sans-serif;
+    color: #555;
+}
+
+a {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    text-decoration: none;
+}
