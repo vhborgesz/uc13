@@ -1,9 +1,10 @@
-.caixa-pix, .caixa-cartao {
+.caixa-pix,
+.caixa-cartao {
     width: 300px;
     border: 2px solid #000;
     border-radius: 10px;
     background-color: #f0f0f0;
-    display: flex; 
+    display: flex;
     visibility: hidden;
     flex-direction: column;
     align-items: center;
@@ -16,6 +17,7 @@
     background-color: #e0e0e0;
 }
 
-.caixa-pix.ativa, .caixa-cartao.ativa {
+.caixa-pix.ativa,
+.caixa-cartao.ativa {
     visibility: visible;
 }
