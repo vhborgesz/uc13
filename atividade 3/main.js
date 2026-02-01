@@ -7,6 +7,7 @@ const campoCartaoNumero = document.getElementById("cartao-numero");
 const campoCartaoTitular = document.getElementById("cartao-titular");
 const campoCodigoSeguranca = document.getElementById("codigo-seguranca");
 const campoVencimentoCartao = document.getElementById("vencimento-cartao");
+const formatoValido = /^\d{2}\/\d{2}$/;
 
 
 document.getElementById("pix").addEventListener("change", function () {
@@ -36,27 +37,39 @@ botaoInformar.addEventListener("click", function () {
     } else if (caixaCartao.checked) {
         if (campoCartaoNumero.value.trim() == "") {
             alert("Por favor, insira o número do cartão para pagamento via Cartão.");
-            if (campoCartaoTitular.value.trim() == "") {
-                alert("Por favor, insira o nome do titular do cartão.");
-            }
-            if (campoCartaoNumero.value.length < 16) {
-                alert("O número do cartão deve ter 16 dígitos.");
-            }
-            if (isNaN(campoCartaoNumero.value)) {
-                alert("O número do cartão deve conter apenas números.");
-            }
-            if (campoCartaoNumero.value.includes(" ")) {
-                alert("O número do cartão não deve conter espaços.");
-            }
-            if (campoCodigoSeguranca.value.trim() == "") {
-                alert("Por favor, insira o código de segurança do cartão.");
-            }
-            if (campoCodigoSeguranca.value.length < 3) {
-                alert("O código de segurança deve ter 3 dígitos.");
-            }
-            if (campoVencimentoCartao.value.trim() == "") {
-                alert("Por favor, insira o vencimento do cartão.");
-            }
+            return;
+        }
+        if (campoCartaoTitular.value.trim() == "") {
+            alert("Por favor, insira o nome do titular do cartão.");
+            return;
+        }
+        if (campoCartaoNumero.value.length < 16) {
+            alert("O número do cartão deve ter 16 dígitos.");
+            return;
+        }
+        if (isNaN(campoCartaoNumero.value)) {
+            alert("O número do cartão deve conter apenas números.");
+            return;
+        }
+        if (campoCartaoNumero.value.includes(" ")) {
+            alert("O número do cartão não deve conter espaços.");
+            return;
+        }
+        if (campoCodigoSeguranca.value.trim() == "") {
+            alert("Por favor, insira o código de segurança do cartão");
+            return;
+        }
+        if (campoCodigoSeguranca.value.length < 3) {
+            alert("O código de segurança deve ter 3 dígitos.");
+            return;
+        }
+        if (campoVencimentoCartao.value.trim() == "") {
+            alert("Por favor, insira o vencimento do cartão.");
+            return;
+        }
+        if (!formatoValido.test(campoVencimentoCartao.value)) {
+            alert("O vencimento do cartão deve estar no formato MM/AA.");
+            return;
         } else {
             alert("Pagamento via Cartão realizado com sucesso!");
         }
