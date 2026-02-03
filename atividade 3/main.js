@@ -8,7 +8,9 @@ const campoCartaoTitular = document.getElementById("cartao-titular");
 const campoCodigoSeguranca = document.getElementById("codigo-seguranca");
 const campoVencimentoCartao = document.getElementById("vencimento-cartao");
 const formatoValido = /^\d{2}\/\d{2}$/;
-
+const valor = parseFloat(campoValor.value);
+const valorComDesconto = valor * 0.9;
+const parcelasInfo = document.getElementById("parcelas-info");
 
 document.getElementById("pix").addEventListener("change", function () {
     document.getElementById("caixaPix").classList.add("ativa");
@@ -32,7 +34,7 @@ botaoInformar.addEventListener("click", function () {
             alert("Por favor, insira o CPF para pagamento via Pix.");
         }
         else {
-            alert("Pagamento via Pix realizado com sucesso!");
+            alert("Pagamento via Pix realizado com sucesso! Valor com desconto: R$ " + valorComDesconto.toFixed(2));
         }
     } else if (caixaCartao.checked) {
         if (campoCartaoNumero.value.trim() == "") {
@@ -72,6 +74,28 @@ botaoInformar.addEventListener("click", function () {
             return;
         } else {
             alert("Pagamento via Cartão realizado com sucesso!");
+        }
+    }
+},);
+  campoValor.addEventListener("input", function() {
+    let valorTotal = parseFloat(campoValor.value);
+
+    if (isNaN(valorTotal) || valorTotal <= 0) {
+        for (let i = 1; i <= 5; i++) {
+            // Verifique se no seu HTML os IDs são realmente p1, p2, p3...
+            const elemento = document.getElementById(`p${i}`);
+            if (elemento) {
+                elemento.innerText = `${i}x de R$ 0,00`;
+            }
+        }
+        return;
+    }
+
+    for (let i = 1; i <= 5; i++) {
+        let valorParcela = valorTotal / i;
+        const elemento = document.getElementById(`p${i}`);
+        if (elemento) {
+            elemento.innerText = `${i}x de R$ ${valorParcela.toFixed(2)}`;
         }
     }
 });
