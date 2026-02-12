@@ -34,3 +34,25 @@ body {
 .texto {
     flex: 1;
 }
+
+.layoutDois .t1, .t2, .t3, .t4, .t5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layoutDois .t2 {
+    margin-right: 250px;
+    font-size: 20px;
+}
+
+.layoutDois .t3 {
+    margin-right: 250px;
+    font-size: 15px;
+}
+
+.layoutDois .t4 {
+    margin-left: 250px;
+    font-size: 20px;
+    
+}
