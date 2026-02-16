@@ -16,43 +16,59 @@ body {
 .layout-principal {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 400px;
-    background: #fff;
-    padding: 20px;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 20px;
+    padding: 100%px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.img1 {
-    position: absolute;
-    top: 70px;
-    left: 450px;
-    max-width: 390px;
+.img1 img {
+    max-width: 450px;
+    height: auto;
 }
 
 .texto {
     flex: 1;
 }
 
-.layoutDois .t1, .t2, .t3, .t4, .t5 {
+.layoutDois {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.t1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.t2, .t4 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.t3, .t5 {
+    font-size: 18px;
+    color: #555;
+}
+
+.container-colunas {
+    display: flex;
     justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    margin-top: 30px;
 }
 
-.layoutDois .t2 {
-    margin-right: 250px;
-    font-size: 20px;
+.coluna {
+    text-align: center;
 }
 
-.layoutDois .t3 {
-    margin-right: 250px;
-    font-size: 15px;
-}
 
-.layoutDois .t4 {
-    margin-left: 250px;
-    font-size: 20px;
-    
-}
+
+
