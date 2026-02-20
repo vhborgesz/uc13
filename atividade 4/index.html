@@ -15,69 +15,98 @@
 <h1>LOGO</h1>
 
 <body>
-    <div class="layout-principal">
-        <div class="texto">
-            <h3>Sinta o conforto, acolhedor de nossas hospedagens</h3>
-            <p>Hospede-se nos nossos hotéis com quartos a partir de R$100,00</p> <br><br>
-            <button>SAIBA MAIS</button>
-        </div>
-        <div class="img1">
-               <img src="img1.jpg" class="img-fluid rounded" alt="Quintal do hotel com piscina">
-           </div>
-    </div> 
+   <div class="container py-5">
+    <h1 class="mb-4">LOGO</h1>
 
-    
-    <br><br>
-    
-    
-    
-    <div class="layoutDois">
-        <h6 class="t1">POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</h6>
-        <div class="container-colunas">
-            <div class="coluna">
-                <p class="t2">Delicioso café da manhã </p>
-                <p class="t3">Incluso em todas as diárias </p>
-            </div>
-            <div class="coluna">
-                <p class="t4">Fácil acesso</p>
-                <p class="t5">Perto dos principais pontos turísiticos</p> <br><br>
-            </div>
-            </div>
-                <div class="layout-embaixo">
-                    <div class="titulo">
-                        <h1>NOSSOS QUARTOS</h1>
-                    </div>
-                     <div class="imagens-layout">
-                         <img src="quarto1.jpg" alt="Suíte solteiro" class="img-fluid rounded">
-                         <img src="quarto2.jpg" alt="Suíte casal" class="img-fluid rounded">
-                         <img src="quarto3.jpg" alt="Suíte master" class="img-fluid rounded">
-                     </div>
-                </div>        
+    <div class="row align-items-center bg-light p-4 rounded shadow-sm mb-5">
+        <div class="col-md-6">
+            <h3>Sinta o conforto, acolhedor de nossas hospedagens</h3>
+            <p>Hospede-se nos nossos hotéis com quartos a partir de R$100,00</p>
+            <button class="btn btn-outline-dark mt-3">SAIBA MAIS</button>
         </div>
-<div class="layout-reserva">
-    <div class="reserva-textos">
-        <h1>FAÇA SUA RESERVA</h1>
-        <p class="textinho">Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
+        <div class="col-md-6 text-end">
+            <img src="img1.jpg" class="img-fluid rounded shadow" alt="Hotel">
         </div>
-        <div class="reserva-botoes">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome"> <br> <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"> <br> <br>
-            <label for="data-entrada">Data de Entrada:</label>
-            <input type="date" id="data-entrada" name="data-entrada"> <br> <br>
-            <label for="data-saida">Data de Saída:</label>
-            <input type="date" id="data-saida" name="data-saida"> <br> <br>
-            <label for="opcao1">Adultos:</label>
-            <input type="number" id="numero-adultos" name="numero-adultos" min="1" max="10"> <br> <br>
-            <label for="opcao2">Crianças:</label>
-            <input type="number" id="numero-criancas" name="numero-criancas" min="0" max="10"> <br> <br>
-            <label for="observacoes">Observações:</label>
-            <textarea id="observacoes" name="observacoes"></textarea> <br><br>
-            <button>ENVIAR</button>
     </div>
+
+    <div class="text-center mb-5">
+        <h6 class="fw-bold mb-4">POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</h6>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <p class="h5 fw-bold">Delicioso café da manhã</p>
+                <p class="text-secondary">Incluso em todas as diárias</p>
+            </div>
+            <div class="col-md-6 mb-3">
+                <p class="h5 fw-bold">Fácil acesso</p>
+                <p class="text-secondary">Perto dos principais pontos turísticos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border p-4 rounded text-center mb-5">
+        <h2 class="mb-4">NOSSOS QUARTOS</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="quarto1.jpg" class="img-fluid rounded mb-2" alt="Suíte Solteiro">
+                <p class="fw-bold">Suíte Solteiro</p>
+            </div>
+            <div class="col-md-4">
+                <img src="quarto2.jpg" class="img-fluid rounded mb-2" alt="Suíte Casal">
+                <p class="fw-bold">Suíte Casal</p>
+            </div>
+            <div class="col-md-4">
+                <img src="quarto3.jpg" class="img-fluid rounded mb-2" alt="Suíte Master">
+                <p class="fw-bold">Suíte Master</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border p-4 rounded bg-white shadow-sm">
+        <div class="row">
+            <div class="col-md-5 pe-md-5">
+                <h1 class="display-6 fw-bold">FAÇA SUA RESERVA</h1>
+                <p class="text-muted">Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
+            </div>
+            <div class="col-md-7">
+                <form id="formReserva" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Data de Entrada:</label>
+                        <input type="date" class="form-control" id="data-entrada" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Data de Saída:</label>
+                        <input type="date" class="form-control" id="data-saida" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Adultos:</label>
+                        <input type="number" class="form-control" id="numero-adultos" min="1" value="1">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Crianças:</label>
+                        <input type="number" class="form-control" id="numero-criancas" min="0" value="0">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Observações:</label>
+                        <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button type="submit" class="btn btn-dark w-100 py-2">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="script.js"></script>
     </body>
 
 </html>
