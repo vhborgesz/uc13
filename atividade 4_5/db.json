@@ -1,0 +1,24 @@
+{
+    "reservas": [
+        {
+            "nome": "Victor Hugo",
+            "email": "ronaldinhogaucho@gmail.com",
+            "entrada": "2026-02-24",
+            "saida": "2026-02-28",
+            "adultos": "2",
+            "criancas": "2",
+            "observacoes": "seja legal",
+            "id": 1
+        },
+        {
+            "nome": "Victor Hugo",
+            "email": "ronaldinhogaucho@gmail.com",
+            "entrada": "2026-03-02",
+            "saida": "2026-03-07",
+            "adultos": "1",
+            "criancas": "0",
+            "observacoes": "seja legal e me da toalha boa",
+            "id": 2
+        }
+    ]
+}

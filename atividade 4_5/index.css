@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.row img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.border {
+    border-color: #dee2e6 !important;
+}
