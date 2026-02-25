@@ -11,6 +11,8 @@ const formatoValido = /^\d{2}\/\d{2}$/;
 const valor = parseFloat(campoValor.value);
 const valorComDesconto = valor * 0.9;
 const parcelasInfo = document.getElementById("parcelas-info");
+const numeroCarta = document.getElementById("numero");
+const icone = document.getElementById("icone-cartao");
 
 document.getElementById("pix").addEventListener("change", function () {
     document.getElementById("caixaPix").classList.add("ativa");
@@ -21,6 +23,7 @@ document.getElementById("cartao").addEventListener("change", function () {
     document.getElementById("caixaPix").classList.remove("ativa");
     document.getElementById("caixaCartao").classList.add("ativa");
 });
+
 
 botaoInformar.addEventListener("click", function () {
     if (campoValor.value.trim() == "") {
@@ -34,9 +37,10 @@ botaoInformar.addEventListener("click", function () {
             alert("Por favor, insira o CPF para pagamento via Pix.");
         }
         else {
-            alert("Pagamento via Pix realizado com sucesso! Valor com desconto: R$ " + valorComDesconto.toFixed(2));
+            alert("Pagamento via Pix realizado com sucesso! Valor com desconto: R$ " + valorComDesconto.toFixed(2) + " (10% de desconto aplicado)");
         }
-    } else if (caixaCartao.checked) {
+    } 
+     if (caixaCartao.checked) {
         if (campoCartaoNumero.value.trim() == "") {
             alert("Por favor, insira o número do cartão para pagamento via Cartão.");
             return;
@@ -72,18 +76,24 @@ botaoInformar.addEventListener("click", function () {
         if (!formatoValido.test(campoVencimentoCartao.value)) {
             alert("O vencimento do cartão deve estar no formato MM/AA.");
             return;
+        }  if (numeroCarta.startsWith("1234")) {
+         icone.src = "icone1.png"
+        } else if (numeroCarta.startsWith("4321")) {
+            icone.src = "icone2.png"
         } else {
+            alert("Número de cartão inválido");
+            return;
+        }
             alert("Pagamento via Cartão realizado com sucesso!");
         }
     }
-},);
+);
   campoValor.addEventListener("input", function() {
     let valorTotal = parseFloat(campoValor.value);
 
     if (isNaN(valorTotal) || valorTotal <= 0) {
         for (let i = 1; i <= 5; i++) {
-            // Verifique se no seu HTML os IDs são realmente p1, p2, p3...
-            const elemento = document.getElementById(`p${i}`);
+            const elemento = document.getElementById(`${i}`);
             if (elemento) {
                 elemento.innerText = `${i}x de R$ 0,00`;
             }
