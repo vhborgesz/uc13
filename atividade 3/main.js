@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 const campoValor = document.getElementById("valor-adicional");
 const botaoInformar = document.getElementById("botao-informar");
 const caixaCartao = document.getElementById("cartao");
@@ -14,6 +15,21 @@ const parcelasInfo = document.getElementById("parcelas-info");
 const numeroCarta = document.getElementById("numero");
 const icone = document.getElementById("icone-cartao");
 
+
+
+campoCartaoNumero.addEventListener("input", function() {
+    const numero = campoCartaoNumero.value;
+    if (numero.startsWith("1234")) {
+        icone.src = "icone1.png";
+        icone.style.display = "block";
+    } else if (numero.startsWith("4321")) {
+        icone.src = "icone2.png";
+        icone.style.display = "block";
+    } else {
+        icone.src = "";
+        icone.style.display = "none";
+    }
+
 document.getElementById("pix").addEventListener("change", function () {
     document.getElementById("caixaPix").classList.add("ativa");
     document.getElementById("caixaCartao").classList.remove("ativa");
@@ -24,14 +40,13 @@ document.getElementById("cartao").addEventListener("change", function () {
     document.getElementById("caixaCartao").classList.add("ativa");
 });
 
-
 botaoInformar.addEventListener("click", function () {
     if (campoValor.value.trim() == "") {
         alert("Por favor, insira o valor.");
-
+        
         return
     }
-
+    
     if (caixaPix.checked) {
         if (campoCpf.value.trim() == "") {
             alert("Por favor, insira o CPF para pagamento via Pix.");
@@ -40,7 +55,7 @@ botaoInformar.addEventListener("click", function () {
             alert("Pagamento via Pix realizado com sucesso! Valor com desconto: R$ " + valorComDesconto.toFixed(2) + " (10% de desconto aplicado)");
         }
     } 
-     if (caixaCartao.checked) {
+    if (caixaCartao.checked) {
         if (campoCartaoNumero.value.trim() == "") {
             alert("Por favor, insira o número do cartão para pagamento via Cartão.");
             return;
@@ -76,17 +91,10 @@ botaoInformar.addEventListener("click", function () {
         if (!formatoValido.test(campoVencimentoCartao.value)) {
             alert("O vencimento do cartão deve estar no formato MM/AA.");
             return;
-        }  if (numeroCarta.startsWith("1234")) {
-         icone.src = "icone1.png"
-        } else if (numeroCarta.startsWith("4321")) {
-            icone.src = "icone2.png"
-        } else {
-            alert("Número de cartão inválido");
-            return;
         }
-            alert("Pagamento via Cartão realizado com sucesso!");
+    };
+        alert("Pagamento via Cartão realizado com sucesso!");
         }
-    }
 );
   campoValor.addEventListener("input", function() {
     let valorTotal = parseFloat(campoValor.value);
@@ -106,6 +114,7 @@ botaoInformar.addEventListener("click", function () {
         const elemento = document.getElementById(`p${i}`);
         if (elemento) {
             elemento.innerText = `${i}x de R$ ${valorParcela.toFixed(2)}`;
-        }
-    }
-});
+               }
+         }
+    }); 
+})}); 
